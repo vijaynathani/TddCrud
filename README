@@ -1,0 +1,12 @@
+In springToolSuite, create a new Spring MVC project
+In pom.xml
+  Ensure latest versions used
+  Ensure javax-servlet artifact id is changed
+
+mvn clean compile test 
+will compile and run all tests
+
+jetty:run
+will start applicaton at http://localhost:8080 by default
+
+  

@@ -1,0 +1,37 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Demo Program</title>
+<link href="../common/concordion.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h2>Demo</h2>
+    <p>
+    This is an example of spring + hibernate application.
+    This is a demo of how to write acceptance tests for
+    this application. 
+    </p>
+    <div class="example">
+		<h3>An Example</h3>
+        Add a customer with values: number = 
+        <span concordion:set="#number">50</span>,
+        name = 
+        <span concordion:set="#name">comp50</span>,
+        address =
+        <span concordion:set="#address">myStreet50</span>,
+        mobile =
+        <span concordion:set="#mobile">50</span>. 
+        <span concordion:execute="addCustomer(#number,#name,#address,#mobile)"> </span><br />
+            
+        Now:
+        <ol>
+ 		<li>View the information and verify that it is <span concordion:assertEquals="viewRecord()"> same </span>.</li>
+ 		<li>Change the name = <span concordion:set="#name">comp51</span>, address = <span concordion:set="#address">myStreet51</span>,
+        mobile = <span concordion:set="#mobile">51</span>. View the information to verify the change is 
+        <span concordion:assertEquals="chgRecord(#name,#address,#mobile)"> done </span>.</li>
+ 		<li>Delete this Customer and ensure View does <span concordion:assertEquals="delRecord()">
+		not find</span>it.</li>
+ 		</ol>
+    </div>
+</body>
+</html>
