@@ -1,12 +1,15 @@
-In springToolSuite, create a new Spring MVC project
-In pom.xml
-  Ensure latest versions used
-  Ensure javax-servlet artifact id is changed
+Simple CRUD example for TDD (Test Driven Development) in Java.
+The example uses Spring, Hibernate, JUnit and Concordion.
 
+Procedure used:         
+In springToolSuite, create a new Spring MVC project
+In pom.xml, ensure latest versions used
+
+Maven commands:
 mvn clean compile test 
 will compile and run all tests
 
-jetty:run
+mvn jetty:run
 will start applicaton at http://localhost:8080 by default
 
-  
+Contact me at vijay_nathani@yahoo.com for any issues.
